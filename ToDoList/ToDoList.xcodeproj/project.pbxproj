@@ -16,6 +16,28 @@
 		3F89EAFC2CE789880046E1BD /* ToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EAFB2CE789880046E1BD /* ToDoListTests.swift */; };
 		3F89EB062CE789880046E1BD /* ToDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB052CE789880046E1BD /* ToDoListUITests.swift */; };
 		3F89EB082CE789880046E1BD /* ToDoListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB072CE789880046E1BD /* ToDoListUITestsLaunchTests.swift */; };
+		3F89EB1F2CE793270046E1BD /* ToDoInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB1E2CE793270046E1BD /* ToDoInteractorInput.swift */; };
+		3F89EB212CE793400046E1BD /* ToDoInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB202CE793400046E1BD /* ToDoInteractorOutput.swift */; };
+		3F89EB232CE793670046E1BD /* ToDoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB222CE793670046E1BD /* ToDoInteractor.swift */; };
+		3F89EB252CE793CD0046E1BD /* DetailInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB242CE793CD0046E1BD /* DetailInteractorInput.swift */; };
+		3F89EB272CE793D80046E1BD /* DetailInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB262CE793D80046E1BD /* DetailInteractorOutput.swift */; };
+		3F89EB292CE793DE0046E1BD /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB282CE793DE0046E1BD /* DetailInteractor.swift */; };
+		3F89EB2B2CE7941D0046E1BD /* ToDoRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB2A2CE7941D0046E1BD /* ToDoRouterInput.swift */; };
+		3F89EB2D2CE794260046E1BD /* ToDoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB2C2CE794260046E1BD /* ToDoRouter.swift */; };
+		3F89EB2F2CE794FB0046E1BD /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB2E2CE794FB0046E1BD /* DetailRouter.swift */; };
+		3F89EB332CE795120046E1BD /* DetailRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB322CE795120046E1BD /* DetailRouterInput.swift */; };
+		3F89EB352CE7972A0046E1BD /* ToDoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB342CE7972A0046E1BD /* ToDoPresenter.swift */; };
+		3F89EB3C2CE798820046E1BD /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB3A2CE798820046E1BD /* ToDoViewController.swift */; };
+		3F89EB3D2CE798820046E1BD /* ToDoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F89EB3B2CE798820046E1BD /* ToDoViewController.xib */; };
+		3F89EB3F2CE798910046E1BD /* ToDoViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB3E2CE798910046E1BD /* ToDoViewInput.swift */; };
+		3F89EB412CE798990046E1BD /* ToDoViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB402CE798990046E1BD /* ToDoViewOutput.swift */; };
+		3F89EB442CE7A7F40046E1BD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB422CE7A7F40046E1BD /* DetailViewController.swift */; };
+		3F89EB452CE7A7F40046E1BD /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F89EB432CE7A7F40046E1BD /* DetailViewController.xib */; };
+		3F89EB472CE7A8040046E1BD /* DetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB462CE7A8040046E1BD /* DetailViewInput.swift */; };
+		3F89EB492CE7A80C0046E1BD /* DetailViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB482CE7A80C0046E1BD /* DetailViewOutput.swift */; };
+		3F89EB4B2CE7A84B0046E1BD /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB4A2CE7A84B0046E1BD /* DetailPresenter.swift */; };
+		3F89EB4D2CE7A8510046E1BD /* DetailPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB4C2CE7A8510046E1BD /* DetailPresenterInput.swift */; };
+		3F89EB4F2CE7A8580046E1BD /* DetailPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB4E2CE7A8580046E1BD /* DetailPresenterOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +71,28 @@
 		3F89EB012CE789880046E1BD /* ToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F89EB052CE789880046E1BD /* ToDoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITests.swift; sourceTree = "<group>"; };
 		3F89EB072CE789880046E1BD /* ToDoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3F89EB1E2CE793270046E1BD /* ToDoInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoInteractorInput.swift; sourceTree = "<group>"; };
+		3F89EB202CE793400046E1BD /* ToDoInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoInteractorOutput.swift; sourceTree = "<group>"; };
+		3F89EB222CE793670046E1BD /* ToDoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoInteractor.swift; sourceTree = "<group>"; };
+		3F89EB242CE793CD0046E1BD /* DetailInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorInput.swift; sourceTree = "<group>"; };
+		3F89EB262CE793D80046E1BD /* DetailInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorOutput.swift; sourceTree = "<group>"; };
+		3F89EB282CE793DE0046E1BD /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		3F89EB2A2CE7941D0046E1BD /* ToDoRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoRouterInput.swift; sourceTree = "<group>"; };
+		3F89EB2C2CE794260046E1BD /* ToDoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoRouter.swift; sourceTree = "<group>"; };
+		3F89EB2E2CE794FB0046E1BD /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		3F89EB322CE795120046E1BD /* DetailRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouterInput.swift; sourceTree = "<group>"; };
+		3F89EB342CE7972A0046E1BD /* ToDoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoPresenter.swift; sourceTree = "<group>"; };
+		3F89EB3A2CE798820046E1BD /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		3F89EB3B2CE798820046E1BD /* ToDoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoViewController.xib; sourceTree = "<group>"; };
+		3F89EB3E2CE798910046E1BD /* ToDoViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewInput.swift; sourceTree = "<group>"; };
+		3F89EB402CE798990046E1BD /* ToDoViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewOutput.swift; sourceTree = "<group>"; };
+		3F89EB422CE7A7F40046E1BD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3F89EB432CE7A7F40046E1BD /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		3F89EB462CE7A8040046E1BD /* DetailViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewInput.swift; sourceTree = "<group>"; };
+		3F89EB482CE7A80C0046E1BD /* DetailViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewOutput.swift; sourceTree = "<group>"; };
+		3F89EB4A2CE7A84B0046E1BD /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		3F89EB4C2CE7A8510046E1BD /* DetailPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterInput.swift; sourceTree = "<group>"; };
+		3F89EB4E2CE7A8580046E1BD /* DetailPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +143,8 @@
 		3F89EAE32CE789870046E1BD /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				3F89EB142CE78F450046E1BD /* ToDoListModule */,
+				3F89EB152CE78F550046E1BD /* DetailModule */,
 				3F89EAE42CE789870046E1BD /* AppDelegate.swift */,
 				3F89EAE62CE789870046E1BD /* SceneDelegate.swift */,
 				3F89EAE82CE789870046E1BD /* ViewController.swift */,
@@ -125,6 +171,106 @@
 				3F89EB072CE789880046E1BD /* ToDoListUITestsLaunchTests.swift */,
 			);
 			path = ToDoListUITests;
+			sourceTree = "<group>";
+		};
+		3F89EB142CE78F450046E1BD /* ToDoListModule */ = {
+			isa = PBXGroup;
+			children = (
+				3F89EB192CE78F700046E1BD /* Interactor */,
+				3F89EB182CE78F6B0046E1BD /* View */,
+				3F89EB172CE78F650046E1BD /* Router */,
+				3F89EB162CE78F5D0046E1BD /* Presenter */,
+			);
+			path = ToDoListModule;
+			sourceTree = "<group>";
+		};
+		3F89EB152CE78F550046E1BD /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				3F89EB1D2CE78F8D0046E1BD /* Interactor */,
+				3F89EB1C2CE78F870046E1BD /* Presenter */,
+				3F89EB1B2CE78F820046E1BD /* Router */,
+				3F89EB1A2CE78F7D0046E1BD /* View */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		3F89EB162CE78F5D0046E1BD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3F89EB342CE7972A0046E1BD /* ToDoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3F89EB172CE78F650046E1BD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3F89EB2A2CE7941D0046E1BD /* ToDoRouterInput.swift */,
+				3F89EB2C2CE794260046E1BD /* ToDoRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3F89EB182CE78F6B0046E1BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F89EB3A2CE798820046E1BD /* ToDoViewController.swift */,
+				3F89EB3B2CE798820046E1BD /* ToDoViewController.xib */,
+				3F89EB3E2CE798910046E1BD /* ToDoViewInput.swift */,
+				3F89EB402CE798990046E1BD /* ToDoViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F89EB192CE78F700046E1BD /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3F89EB1E2CE793270046E1BD /* ToDoInteractorInput.swift */,
+				3F89EB202CE793400046E1BD /* ToDoInteractorOutput.swift */,
+				3F89EB222CE793670046E1BD /* ToDoInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3F89EB1A2CE78F7D0046E1BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F89EB422CE7A7F40046E1BD /* DetailViewController.swift */,
+				3F89EB432CE7A7F40046E1BD /* DetailViewController.xib */,
+				3F89EB462CE7A8040046E1BD /* DetailViewInput.swift */,
+				3F89EB482CE7A80C0046E1BD /* DetailViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F89EB1B2CE78F820046E1BD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3F89EB2E2CE794FB0046E1BD /* DetailRouter.swift */,
+				3F89EB322CE795120046E1BD /* DetailRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3F89EB1C2CE78F870046E1BD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3F89EB4A2CE7A84B0046E1BD /* DetailPresenter.swift */,
+				3F89EB4C2CE7A8510046E1BD /* DetailPresenterInput.swift */,
+				3F89EB4E2CE7A8580046E1BD /* DetailPresenterOutput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3F89EB1D2CE78F8D0046E1BD /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3F89EB242CE793CD0046E1BD /* DetailInteractorInput.swift */,
+				3F89EB262CE793D80046E1BD /* DetailInteractorOutput.swift */,
+				3F89EB282CE793DE0046E1BD /* DetailInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +377,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F89EB3D2CE798820046E1BD /* ToDoViewController.xib in Resources */,
 				3F89EAEE2CE789880046E1BD /* Assets.xcassets in Resources */,
+				3F89EB452CE7A7F40046E1BD /* DetailViewController.xib in Resources */,
 				3F89EAF12CE789880046E1BD /* Base in Resources */,
 				3F89EAEC2CE789870046E1BD /* Base in Resources */,
 			);
@@ -258,9 +406,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F89EB472CE7A8040046E1BD /* DetailViewInput.swift in Sources */,
 				3F89EAE92CE789870046E1BD /* ViewController.swift in Sources */,
+				3F89EB252CE793CD0046E1BD /* DetailInteractorInput.swift in Sources */,
+				3F89EB212CE793400046E1BD /* ToDoInteractorOutput.swift in Sources */,
+				3F89EB292CE793DE0046E1BD /* DetailInteractor.swift in Sources */,
+				3F89EB4F2CE7A8580046E1BD /* DetailPresenterOutput.swift in Sources */,
+				3F89EB4B2CE7A84B0046E1BD /* DetailPresenter.swift in Sources */,
+				3F89EB412CE798990046E1BD /* ToDoViewOutput.swift in Sources */,
+				3F89EB1F2CE793270046E1BD /* ToDoInteractorInput.swift in Sources */,
+				3F89EB2B2CE7941D0046E1BD /* ToDoRouterInput.swift in Sources */,
 				3F89EAE52CE789870046E1BD /* AppDelegate.swift in Sources */,
+				3F89EB332CE795120046E1BD /* DetailRouterInput.swift in Sources */,
+				3F89EB442CE7A7F40046E1BD /* DetailViewController.swift in Sources */,
+				3F89EB2D2CE794260046E1BD /* ToDoRouter.swift in Sources */,
+				3F89EB232CE793670046E1BD /* ToDoInteractor.swift in Sources */,
+				3F89EB3C2CE798820046E1BD /* ToDoViewController.swift in Sources */,
+				3F89EB2F2CE794FB0046E1BD /* DetailRouter.swift in Sources */,
+				3F89EB272CE793D80046E1BD /* DetailInteractorOutput.swift in Sources */,
+				3F89EB492CE7A80C0046E1BD /* DetailViewOutput.swift in Sources */,
+				3F89EB352CE7972A0046E1BD /* ToDoPresenter.swift in Sources */,
 				3F89EAE72CE789870046E1BD /* SceneDelegate.swift in Sources */,
+				3F89EB4D2CE7A8510046E1BD /* DetailPresenterInput.swift in Sources */,
+				3F89EB3F2CE798910046E1BD /* ToDoViewInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
