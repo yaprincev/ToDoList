@@ -9,7 +9,7 @@
 
 final class DetailInteractor {
     
-    // MARK:  - Properties
+    // MARK: - Properties
     
     weak var output: DetailInteractorOutput?
     

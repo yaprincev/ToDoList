@@ -9,7 +9,7 @@
 
 final class DetailPresenter {
     
-    // MARK:  - Properties
+    // MARK: - Properties
     
     weak var view: DetailViewInput?
     var router: DetailRouterInput?
