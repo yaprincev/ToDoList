@@ -9,7 +9,7 @@ import UIKit
 
 final class ToDoViewController: UIViewController {
 
-    // MARK: - View output
+    // MARK: - ToDoViewOutput
     
     var output: ToDoViewOutput?
     
@@ -21,7 +21,7 @@ final class ToDoViewController: UIViewController {
 
 }
 
-// MARK: - View input
+// MARK: - ToDoViewInput
 
 extension ToDoViewController: ToDoViewInput {
 }

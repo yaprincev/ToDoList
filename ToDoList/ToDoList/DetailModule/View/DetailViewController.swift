@@ -8,9 +8,20 @@
 import UIKit
 
 final class DetailViewController: UIViewController {
+    
+    // MARK: - DetailViewOutput
+    
+    var output: DetailViewOutput?
+
+    // MARK: - UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+}
+
+// MARK: - DetailViewInput
+
+extension DetailViewController: DetailViewInput {
 }
