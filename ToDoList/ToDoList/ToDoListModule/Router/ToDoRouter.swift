@@ -8,4 +8,9 @@
 // MARK: - Router
 
 final class ToDoRouter: ToDoRouterInput {
+    
+    // MARK: - Properties
+    
+    weak var view: ModuleTransitionable?
+    
 }
