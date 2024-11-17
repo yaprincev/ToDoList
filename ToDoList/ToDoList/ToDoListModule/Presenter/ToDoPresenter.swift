@@ -13,6 +13,7 @@ final class ToDoPresenter {
     
     weak var view: ToDoViewInput?
     var router: ToDoRouterInput?
+    var interactor: ToDoInteractorInput?
     
 }
 
@@ -24,5 +25,18 @@ extension ToDoPresenter: ToDoViewOutput {
 // MARK: - DetailPresenterOutput
 
 extension ToDoPresenter: DetailPresenterOutput {
+    
+    func viewDidLoad() {
+        interactor?.configureMockData()
+    }
+    
+}
+
+extension ToDoPresenter: ToDoInteractorOutput {
+    
+    func didCreateMockData(mockData: [ToDoEntity]) {
+        view?.setupInitialState(model: mockData)
+    }
+    
 }
 
