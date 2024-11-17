@@ -40,7 +40,7 @@ final class ToDoViewController: UIViewController, ModuleTransitionable {
 
 extension ToDoViewController: ToDoViewInput {
     
-    func setupInitialState(model: [ToDoEntity]) {
+    func setupInitialState(with model: [ToDoEntity]) {
         adapter.configure(with: model)
         sumLabel.text = String(model.count) + " " + model.count.pluralized(forms: ("Задача", "Задачи", "Задач"))
     }

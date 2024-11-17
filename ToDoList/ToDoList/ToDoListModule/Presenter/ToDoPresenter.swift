@@ -37,7 +37,7 @@ extension ToDoPresenter: DetailPresenterOutput {
 extension ToDoPresenter: ToDoInteractorOutput {
     
     func didCreateMockData(mockData: [ToDoEntity]) {
-        view?.setupInitialState(model: mockData)
+        view?.setupInitialState(with: mockData)
     }
     
 }

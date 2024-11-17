@@ -6,5 +6,5 @@
 //
 
 protocol ToDoViewInput: AnyObject {
-    func setupInitialState(model: [ToDoEntity])
+    func setupInitialState(with: [ToDoEntity])
 }
