@@ -6,4 +6,5 @@
 //
 
 protocol ToDoInteractorInput: AnyObject {
+    func configureMockData()
 }
