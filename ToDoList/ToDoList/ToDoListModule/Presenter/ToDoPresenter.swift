@@ -20,17 +20,19 @@ final class ToDoPresenter {
 // MARK: - ToDoViewOutput
 
 extension ToDoPresenter: ToDoViewOutput {
+
+    func viewDidLoad() {
+        interactor?.configureMockData()
+    }
+
 }
 
 // MARK: - DetailPresenterOutput
 
 extension ToDoPresenter: DetailPresenterOutput {
-    
-    func viewDidLoad() {
-        interactor?.configureMockData()
-    }
-    
 }
+
+// MARK: - ToDoInteractorOutput
 
 extension ToDoPresenter: ToDoInteractorOutput {
     
