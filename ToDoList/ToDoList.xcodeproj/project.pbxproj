@@ -158,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				3F89EB5F2CEA2D040046E1BD /* Reusable layer */,
-				3F89EB522CE7C7070046E1BD /* Support */,
 				3F89EB142CE78F450046E1BD /* ToDoListModule */,
 				3F89EB152CE78F550046E1BD /* DetailModule */,
 				3F89EAE42CE789870046E1BD /* AppDelegate.swift */,
@@ -291,14 +290,6 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		3F89EB522CE7C7070046E1BD /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				3F89EB532CE7C71E0046E1BD /* ModuleTransitionable.swift */,
-			);
-			path = Support;
-			sourceTree = "<group>";
-		};
 		3F89EB552CE7DEBA0046E1BD /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +311,7 @@
 		3F89EB5F2CEA2D040046E1BD /* Reusable layer */ = {
 			isa = PBXGroup;
 			children = (
+				3F89EB532CE7C71E0046E1BD /* ModuleTransitionable.swift */,
 				3F89EB602CEA2D0B0046E1BD /* Extensions */,
 			);
 			path = "Reusable layer";
