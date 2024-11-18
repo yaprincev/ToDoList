@@ -9,7 +9,7 @@ import Foundation
 
 extension Int {
     
-    /// Return pluralized for of word
+    /// Return pluralized form of word
     
     func pluralized(forms: (String, String, String)) -> String {
         let reminderOfTen = self % 10

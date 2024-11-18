@@ -48,7 +48,4 @@ extension ToDoAdapter: UITableViewDataSource {
         
     }
     
-    
-    
-    
 }
