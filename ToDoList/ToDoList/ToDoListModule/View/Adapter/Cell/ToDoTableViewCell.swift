@@ -11,10 +11,15 @@ class ToDoTableViewCell: UITableViewCell {
     
     // MARK: - IBOutlet
     
+    @IBOutlet private weak var strikedTitle: UILabel!
     @IBOutlet private weak var title: UILabel!
     @IBOutlet private weak var detailInformation: UILabel!
     @IBOutlet private weak var date: UILabel!
     @IBOutlet private weak var doneButton: UIButton!
+    
+    // MARK: - Properties
+    
+    var onDoneStateChanged: Closure<(Int)>?
     
     // MARK: - Private properties
     
@@ -30,9 +35,11 @@ class ToDoTableViewCell: UITableViewCell {
     // MARK: - Methods
     
     func configure(with model: ToDoEntity) {
+        self.model = model
         title.text = model.title
+        strikedTitle.text = model.title
         detailInformation.text = model.description
-        date.text = model.date.formatted()
+        configureDate(with: model.date)
         configureCellState(isDone: model.isDone)
     }
 
@@ -43,15 +50,23 @@ class ToDoTableViewCell: UITableViewCell {
 private extension ToDoTableViewCell {
  
     func configureAppearence() {
-        configureTitle()
+        configureTitles()
         configureDetailInformation()
-        configureDate()
+        configureTapHandler()
+        configureStrikedTitle()
         backgroundColor = .black
     }
     
-    func configureTitle() {
+    func configureTitles() {
         title.numberOfLines = 1
         title.textColor = .white
+        title.font = .systemFont(ofSize: 16, weight: .bold)
+    }
+    
+    func configureStrikedTitle() {
+        strikedTitle.numberOfLines = 1
+        strikedTitle.textColor = UIColor(red: 244/255, green: 244/255, blue: 244/255, alpha: 1.0)
+        strikedTitle.font = .systemFont(ofSize: 17, weight: .medium)
     }
     
     func configureDetailInformation() {
@@ -59,23 +74,41 @@ private extension ToDoTableViewCell {
         detailInformation.textColor = .white
     }
     
-    func configureDate() {
+    func configureDate(with dateText: Date) {
         date.font = .systemFont(ofSize: 12, weight: .light)
         date.numberOfLines = 1
         date.textColor = .white
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yy"
+        date.text = formatter.string(from: dateText)
     }
     
     func configureCellState(isDone: Bool) {
         if isDone {
             doneButton.setImage(UIImage(named: "filledCircle"), for: .normal)
             detailInformation.font = .systemFont(ofSize: 12, weight: .light)
-            title.font = .systemFont(ofSize: 16, weight: .light)
-            title.attributedText = title.text?.withStrikeTrough()
+            strikedTitle.attributedText = strikedTitle.text?.withStrikeTrough()
+            strikedTitle.isHidden = false
+            title.isHidden = true
         } else {
             doneButton.setImage(UIImage(named: "circle"), for: .normal)
             detailInformation.font = .systemFont(ofSize: 12, weight: .medium)
-            title.font = .systemFont(ofSize: 16, weight: .bold)
+            detailInformation.textColor = .white
+            strikedTitle.isHidden = true
+            title.isHidden = false
         }
+    }
+    
+    @objc func handleTap() {
+        guard let model else {
+            return
+        }
+        onDoneStateChanged?(model.id)
+    }
+    
+    func configureTapHandler() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        addGestureRecognizer(tapGesture)
     }
     
 }
