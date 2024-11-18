@@ -11,6 +11,6 @@ struct ToDoEntity {
     let title: String
     let description: String
     let date: Date
-    let isDone: Bool
+    var isDone: Bool
     let id: Int
 }
