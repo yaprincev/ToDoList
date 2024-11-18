@@ -7,4 +7,5 @@
 
 protocol ToDoViewInput: AnyObject {
     func setupInitialState(with: [ToDoEntity])
+    func updateDoneStatus(for: ToDoEntity)
 }

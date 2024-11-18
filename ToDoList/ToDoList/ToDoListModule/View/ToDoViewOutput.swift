@@ -7,5 +7,6 @@
 
 protocol ToDoViewOutput: AnyObject {
     func viewDidLoad()
+    func changeTaskDoneStatus(for: Int)
 }
 
