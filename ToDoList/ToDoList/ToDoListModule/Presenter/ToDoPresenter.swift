@@ -28,6 +28,10 @@ extension ToDoPresenter: ToDoViewOutput {
     func changeTaskDoneStatus(for id: Int) {
         interactor?.changeTaskDoneStatus(for: id)
     }
+    
+    func searchTasks(with query: String) {
+        interactor?.filterTasks(with: query)
+    }
 
 }
 
@@ -41,11 +45,15 @@ extension ToDoPresenter: DetailPresenterOutput {
 extension ToDoPresenter: ToDoInteractorOutput {
     
     func didCreateMockData(mockData: [ToDoEntity]) {
-        view?.setupInitialState(with: mockData)
+        view?.displayTasks(with: mockData)
     }
     
     func didChangeDoneStatus(for model: ToDoEntity) {
         view?.updateDoneStatus(for: model)
+    }
+    
+    func didFilterTasks(filteredTasks: [ToDoEntity]) {
+        view?.displayTasks(with: filteredTasks)
     }
     
 }
