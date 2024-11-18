@@ -8,4 +8,5 @@
 protocol ToDoInteractorOutput: AnyObject {
     func didCreateMockData(mockData: [ToDoEntity])
     func didChangeDoneStatus(for: ToDoEntity)
+    func didFilterTasks(filteredTasks: [ToDoEntity])
 }
