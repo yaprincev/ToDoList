@@ -6,5 +6,6 @@
 //
 
 protocol ToDoViewOutput: AnyObject {
+    func viewDidLoad()
 }
 

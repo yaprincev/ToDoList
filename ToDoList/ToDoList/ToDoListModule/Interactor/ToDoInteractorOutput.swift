@@ -6,4 +6,5 @@
 //
 
 protocol ToDoInteractorOutput: AnyObject {
+    func didCreateMockData(mockData: [ToDoEntity])
 }
