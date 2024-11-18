@@ -43,18 +43,28 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFS-OI-3aZ">
+                        <rect key="frame" x="39" y="13.666666666666664" width="318" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Do5-66-nRe" firstAttribute="top" secondItem="0gE-HY-GrB" secondAttribute="bottom" constant="12" id="1DB-KW-7K6"/>
                     <constraint firstAttribute="trailing" secondItem="0gE-HY-GrB" secondAttribute="trailing" constant="10" id="313-hN-uBG"/>
                     <constraint firstItem="VwH-9U-nK5" firstAttribute="top" secondItem="Do5-66-nRe" secondAttribute="bottom" constant="12" id="84l-eA-Rr6"/>
                     <constraint firstItem="0gE-HY-GrB" firstAttribute="leading" secondItem="xMv-zo-DCO" secondAttribute="trailing" constant="15" id="CiB-lZ-N5B"/>
+                    <constraint firstItem="AFS-OI-3aZ" firstAttribute="centerY" secondItem="xMv-zo-DCO" secondAttribute="centerY" id="DCG-Hp-ok6"/>
+                    <constraint firstItem="AFS-OI-3aZ" firstAttribute="leading" secondItem="xMv-zo-DCO" secondAttribute="trailing" constant="15" id="FKV-h2-jZT"/>
                     <constraint firstItem="0gE-HY-GrB" firstAttribute="centerY" secondItem="xMv-zo-DCO" secondAttribute="centerY" id="SP8-pu-s7U"/>
                     <constraint firstAttribute="trailing" secondItem="VwH-9U-nK5" secondAttribute="trailing" constant="10" id="X0e-YI-SlC"/>
                     <constraint firstAttribute="trailing" secondItem="Do5-66-nRe" secondAttribute="trailing" constant="10" id="Y5e-cM-pFE"/>
+                    <constraint firstItem="AFS-OI-3aZ" firstAttribute="width" secondItem="0gE-HY-GrB" secondAttribute="width" id="Y62-SZ-bSo"/>
                     <constraint firstItem="xMv-zo-DCO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="YyP-SW-371"/>
                     <constraint firstItem="Do5-66-nRe" firstAttribute="leading" secondItem="xMv-zo-DCO" secondAttribute="trailing" constant="15" id="gLu-zJ-Fzy"/>
                     <constraint firstAttribute="bottomMargin" secondItem="VwH-9U-nK5" secondAttribute="bottom" constant="10" id="lTw-ma-QpI"/>
+                    <constraint firstItem="AFS-OI-3aZ" firstAttribute="height" secondItem="0gE-HY-GrB" secondAttribute="height" id="mdf-R4-iHv"/>
                     <constraint firstItem="VwH-9U-nK5" firstAttribute="leading" secondItem="xMv-zo-DCO" secondAttribute="trailing" constant="15" id="mzj-Kf-dtR"/>
                     <constraint firstItem="xMv-zo-DCO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yBp-FU-FIZ"/>
                 </constraints>
@@ -64,6 +74,7 @@
                 <outlet property="date" destination="VwH-9U-nK5" id="a2a-z7-r8e"/>
                 <outlet property="detailInformation" destination="Do5-66-nRe" id="bFu-bx-lia"/>
                 <outlet property="doneButton" destination="xMv-zo-DCO" id="9TU-tp-4Dq"/>
+                <outlet property="strikedTitle" destination="AFS-OI-3aZ" id="A8k-ro-6Yi"/>
                 <outlet property="title" destination="0gE-HY-GrB" id="UlY-eo-BBp"/>
             </connections>
             <point key="canvasLocation" x="-147.32824427480915" y="55.633802816901408"/>

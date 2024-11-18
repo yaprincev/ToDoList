@@ -24,6 +24,10 @@ extension ToDoPresenter: ToDoViewOutput {
     func viewDidLoad() {
         interactor?.configureMockData()
     }
+    
+    func changeTaskDoneStatus(for id: Int) {
+        interactor?.changeTaskDoneStatus(for: id)
+    }
 
 }
 
@@ -38,6 +42,10 @@ extension ToDoPresenter: ToDoInteractorOutput {
     
     func didCreateMockData(mockData: [ToDoEntity]) {
         view?.setupInitialState(with: mockData)
+    }
+    
+    func didChangeDoneStatus(for model: ToDoEntity) {
+        view?.updateDoneStatus(for: model)
     }
     
 }

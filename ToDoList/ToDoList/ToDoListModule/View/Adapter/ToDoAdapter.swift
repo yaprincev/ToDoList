@@ -13,6 +13,11 @@ final class ToDoAdapter: NSObject {
 
     private var model: [ToDoEntity]?
     private let tableView: UITableView
+    private var lastChangedCell: ToDoTableViewCell?
+    
+    // MARK: - Properties
+    
+    var onDoneStateChanged: Closure<(Int)>?
     
     // MARK: - Initialization
 
@@ -29,10 +34,14 @@ final class ToDoAdapter: NSObject {
         tableView.register(UINib(nibName: "ToDoTableViewCell", bundle: nil), forCellReuseIdentifier: "ToDoCell")
         tableView.reloadData()
     }
+    
+    func updateCellDoneState(for model: ToDoEntity) {
+        lastChangedCell?.configure(with: model)
+    }
 
 }
 
-extension ToDoAdapter: UITableViewDataSource {
+extension ToDoAdapter: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model?.count ?? 0
@@ -43,9 +52,12 @@ extension ToDoAdapter: UITableViewDataSource {
             return UITableViewCell()
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath) as? ToDoTableViewCell
+        cell?.onDoneStateChanged = { [weak self] id in
+            self?.lastChangedCell = cell
+            self?.onDoneStateChanged?(id)
+        }
         cell?.configure(with: model[indexPath.row])
         return cell ?? UITableViewCell()
-        
     }
     
 }

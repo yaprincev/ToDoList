@@ -11,6 +11,10 @@ import Foundation
 
 final class ToDoInteractor {
     
+    // MARK: - Private properties
+    
+    private var data: [ToDoEntity]?
+    
     // MARK:  - Properties
     
     weak var output: ToDoInteractorOutput?
@@ -27,6 +31,17 @@ extension ToDoInteractor: ToDoInteractorInput {
         mockData.append(ToDoEntity(title: "Уборка в квартире", description: "Провести генеральную уборку в квартире", date: Date(), isDone: false, id: 2))
         mockData.append(ToDoEntity(title: "Заняться спортом", description: "Сходить в спортзал или сделать тренировку дома. Не забыть про разминку и растяжку", date: Date(), isDone: false, id: 3))
         output?.didCreateMockData(mockData: mockData)
+        data = mockData
     }
     
+    func changeTaskDoneStatus(for id: Int) {
+        guard let index = data?.firstIndex(where: { $0.id == id }) else {
+            return
+        }
+        data?[index].isDone.toggle()
+        if let data {
+            output?.didChangeDoneStatus(for: data[index])
+        }
+    }
+
 }

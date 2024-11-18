@@ -45,6 +45,10 @@ extension ToDoViewController: ToDoViewInput {
         sumLabel.text = String(model.count) + " " + model.count.pluralized(forms: ("Задача", "Задачи", "Задач"))
     }
     
+    func updateDoneStatus(for model: ToDoEntity) {
+        adapter.updateCellDoneState(for: model)
+    }
+    
 }
 
 // MARK: - Private methods
@@ -69,6 +73,9 @@ private extension ToDoViewController {
     
     func configureAdapter() {
         tableView.dataSource = adapter
+        adapter.onDoneStateChanged = { [weak self] id in
+            self?.output?.changeTaskDoneStatus(for: id)
+        }
     }
     
     func configureSearchBar() {

@@ -7,4 +7,5 @@
 
 protocol ToDoInteractorInput: AnyObject {
     func configureMockData()
+    func changeTaskDoneStatus(for: Int)
 }

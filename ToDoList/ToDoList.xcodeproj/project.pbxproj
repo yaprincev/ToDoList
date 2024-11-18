@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F355EA62CEA8D6F00C5D652 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F355EA52CEA8D6F00C5D652 /* Closures.swift */; };
 		3F588BBF2CEA4BC400E87525 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F588BBE2CEA4BC400E87525 /* Int.swift */; };
 		3F89EAE52CE789870046E1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EAE42CE789870046E1BD /* AppDelegate.swift */; };
 		3F89EAE72CE789870046E1BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EAE62CE789870046E1BD /* SceneDelegate.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F355EA52CEA8D6F00C5D652 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 		3F588BBE2CEA4BC400E87525 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		3F89EAE12CE789870046E1BD /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F89EAE42CE789870046E1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F355EA42CEA8D6200C5D652 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3F355EA52CEA8D6F00C5D652 /* Closures.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		3F588BC02CEA653E00E87525 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +329,7 @@
 		3F89EB5F2CEA2D040046E1BD /* Reusable layer */ = {
 			isa = PBXGroup;
 			children = (
+				3F355EA42CEA8D6200C5D652 /* Library */,
 				3F588BC02CEA653E00E87525 /* Protocols */,
 				3F89EB602CEA2D0B0046E1BD /* Extensions */,
 			);
@@ -492,6 +503,7 @@
 				3F89EB492CE7A80C0046E1BD /* DetailViewOutput.swift in Sources */,
 				3F89EB512CE7C6440046E1BD /* ToDoListAssembly.swift in Sources */,
 				3F89EB542CE7C71E0046E1BD /* ModuleTransitionable.swift in Sources */,
+				3F355EA62CEA8D6F00C5D652 /* Closures.swift in Sources */,
 				3F89EB352CE7972A0046E1BD /* ToDoPresenter.swift in Sources */,
 				3F89EAE72CE789870046E1BD /* SceneDelegate.swift in Sources */,
 				3F588BBF2CEA4BC400E87525 /* Int.swift in Sources */,
