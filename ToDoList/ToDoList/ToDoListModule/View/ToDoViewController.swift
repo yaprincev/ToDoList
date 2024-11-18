@@ -117,11 +117,7 @@ private extension ToDoViewController {
 extension ToDoViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.isEmpty {
-            output?.searchTasks(with: "")
-        } else {
-            output?.searchTasks(with: searchText)
-        }
+        output?.searchTasks(with: searchText)
     }
     
 }
