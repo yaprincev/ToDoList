@@ -50,14 +50,14 @@ class ToDoTableViewCell: UITableViewCell {
 private extension ToDoTableViewCell {
  
     func configureAppearence() {
-        configureTitles()
+        configureTitle()
         configureDetailInformation()
         configureTapHandler()
         configureStrikedTitle()
         backgroundColor = .black
     }
     
-    func configureTitles() {
+    func configureTitle() {
         title.numberOfLines = 1
         title.textColor = .white
         title.font = .systemFont(ofSize: 16, weight: .bold)
