@@ -8,5 +8,6 @@
 protocol ToDoViewOutput: AnyObject {
     func viewDidLoad()
     func changeTaskDoneStatus(for: Int)
+    func searchTasks(with: String)
 }
 

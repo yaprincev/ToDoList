@@ -6,6 +6,6 @@
 //
 
 protocol ToDoViewInput: AnyObject {
-    func setupInitialState(with: [ToDoEntity])
+    func displayTasks(with: [ToDoEntity])
     func updateDoneStatus(for: ToDoEntity)
 }
