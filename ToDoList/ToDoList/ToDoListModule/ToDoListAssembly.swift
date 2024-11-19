@@ -13,7 +13,10 @@ final class ToDoListAssembly {
         let view = ToDoViewController()
         let router = ToDoRouter()
         let presenter = ToDoPresenter()
-        let interactor = ToDoInteractor()
+        
+        let networkService = NetworkService()
+        let interactor = ToDoInteractor(networkService: networkService)
+        
         presenter.interactor = interactor
         presenter.view = view
         presenter.router = router
