@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3F355EA62CEA8D6F00C5D652 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F355EA52CEA8D6F00C5D652 /* Closures.swift */; };
+		3F355EA92CECBE8800C5D652 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F355EA82CECBE8800C5D652 /* NetworkService.swift */; };
+		3F355EAB2CECBEA400C5D652 /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F355EAA2CECBEA400C5D652 /* NetworkConfiguration.swift */; };
+		3F355EAD2CECBEC700C5D652 /* URLStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F355EAC2CECBEC700C5D652 /* URLStorage.swift */; };
+		3F355EB12CECC73100C5D652 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F355EB02CECC73100C5D652 /* ToDoModel.swift */; };
 		3F588BBF2CEA4BC400E87525 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F588BBE2CEA4BC400E87525 /* Int.swift */; };
 		3F89EAE52CE789870046E1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EAE42CE789870046E1BD /* AppDelegate.swift */; };
 		3F89EAE72CE789870046E1BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EAE62CE789870046E1BD /* SceneDelegate.swift */; };
@@ -67,6 +71,10 @@
 
 /* Begin PBXFileReference section */
 		3F355EA52CEA8D6F00C5D652 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
+		3F355EA82CECBE8800C5D652 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3F355EAA2CECBEA400C5D652 /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
+		3F355EAC2CECBEC700C5D652 /* URLStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLStorage.swift; sourceTree = "<group>"; };
+		3F355EB02CECC73100C5D652 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
 		3F588BBE2CEA4BC400E87525 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		3F89EAE12CE789870046E1BD /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F89EAE42CE789870046E1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +152,33 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		3F355EA72CECBE7500C5D652 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3F355EAE2CECC02400C5D652 /* Model */,
+				3F355EA82CECBE8800C5D652 /* NetworkService.swift */,
+				3F355EAA2CECBEA400C5D652 /* NetworkConfiguration.swift */,
+				3F355EAC2CECBEC700C5D652 /* URLStorage.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3F355EAE2CECC02400C5D652 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F89EB582CE7E8E60046E1BD /* ToDoEntity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F355EAF2CECC72900C5D652 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F355EB02CECC73100C5D652 /* ToDoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3F588BC02CEA653E00E87525 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +210,7 @@
 		3F89EAE32CE789870046E1BD /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				3F355EA72CECBE7500C5D652 /* Networking */,
 				3F89EB5F2CEA2D040046E1BD /* Reusable layer */,
 				3F89EB142CE78F450046E1BD /* ToDoListModule */,
 				3F89EB152CE78F550046E1BD /* DetailModule */,
@@ -184,7 +220,6 @@
 				3F89EAED2CE789880046E1BD /* Assets.xcassets */,
 				3F89EAEF2CE789880046E1BD /* LaunchScreen.storyboard */,
 				3F89EAF22CE789880046E1BD /* Info.plist */,
-				3F89EB582CE7E8E60046E1BD /* ToDoEntity.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -209,6 +244,7 @@
 		3F89EB142CE78F450046E1BD /* ToDoListModule */ = {
 			isa = PBXGroup;
 			children = (
+				3F355EAF2CECC72900C5D652 /* Model */,
 				3F89EB192CE78F700046E1BD /* Interactor */,
 				3F89EB182CE78F6B0046E1BD /* View */,
 				3F89EB172CE78F650046E1BD /* Router */,
@@ -485,9 +521,11 @@
 				3F89EB212CE793400046E1BD /* ToDoInteractorOutput.swift in Sources */,
 				3F89EB292CE793DE0046E1BD /* DetailInteractor.swift in Sources */,
 				3F89EB4F2CE7A8580046E1BD /* DetailPresenterOutput.swift in Sources */,
+				3F355EB12CECC73100C5D652 /* ToDoModel.swift in Sources */,
 				3F89EB4B2CE7A84B0046E1BD /* DetailPresenter.swift in Sources */,
 				3F89EB5D2CE8DCCB0046E1BD /* ToDoTableViewCell.swift in Sources */,
 				3F89EB572CE7DEC60046E1BD /* ToDoAdapter.swift in Sources */,
+				3F355EA92CECBE8800C5D652 /* NetworkService.swift in Sources */,
 				3F89EB412CE798990046E1BD /* ToDoViewOutput.swift in Sources */,
 				3F89EB1F2CE793270046E1BD /* ToDoInteractorInput.swift in Sources */,
 				3F89EB2B2CE7941D0046E1BD /* ToDoRouterInput.swift in Sources */,
@@ -496,7 +534,9 @@
 				3F89EB442CE7A7F40046E1BD /* DetailViewController.swift in Sources */,
 				3F89EB2D2CE794260046E1BD /* ToDoRouter.swift in Sources */,
 				3F89EB232CE793670046E1BD /* ToDoInteractor.swift in Sources */,
+				3F355EAD2CECBEC700C5D652 /* URLStorage.swift in Sources */,
 				3F89EB592CE7E8E60046E1BD /* ToDoEntity.swift in Sources */,
+				3F355EAB2CECBEA400C5D652 /* NetworkConfiguration.swift in Sources */,
 				3F89EB3C2CE798820046E1BD /* ToDoViewController.swift in Sources */,
 				3F89EB2F2CE794FB0046E1BD /* DetailRouter.swift in Sources */,
 				3F89EB272CE793D80046E1BD /* DetailInteractorOutput.swift in Sources */,

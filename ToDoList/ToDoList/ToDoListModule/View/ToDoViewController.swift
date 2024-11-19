@@ -44,12 +44,12 @@ final class ToDoViewController: UIViewController, ModuleTransitionable {
 
 extension ToDoViewController: ToDoViewInput {
     
-    func displayTasks(with model: [ToDoEntity]) {
+    func displayTasks(with model: [ToDoModel]) {
         adapter.configure(with: model)
         sumLabel.text = String(model.count) + " " + model.count.pluralized(forms: ("Задача", "Задачи", "Задач"))
     }
     
-    func updateDoneStatus(for model: ToDoEntity) {
+    func updateDoneStatus(for model: ToDoModel) {
         adapter.updateCellDoneState(for: model)
     }
     

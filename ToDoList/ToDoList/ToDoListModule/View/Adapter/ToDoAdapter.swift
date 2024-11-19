@@ -11,7 +11,7 @@ final class ToDoAdapter: NSObject {
 
     // MARK: - Private Properties
 
-    private var model: [ToDoEntity]?
+    private var model: [ToDoModel]?
     private let tableView: UITableView
     private var lastChangedCell: ToDoTableViewCell?
     
@@ -28,14 +28,14 @@ final class ToDoAdapter: NSObject {
     
     // MARK: - Methods
     
-    func configure(with model: [ToDoEntity]) {
+    func configure(with model: [ToDoModel]) {
         self.model = model
         tableView.backgroundColor = .black
         tableView.register(UINib(nibName: "ToDoTableViewCell", bundle: nil), forCellReuseIdentifier: "ToDoCell")
         tableView.reloadData()
     }
     
-    func updateCellDoneState(for model: ToDoEntity) {
+    func updateCellDoneState(for model: ToDoModel) {
         lastChangedCell?.configure(with: model)
     }
 

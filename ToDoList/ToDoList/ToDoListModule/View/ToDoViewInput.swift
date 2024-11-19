@@ -6,7 +6,7 @@
 //
 
 protocol ToDoViewInput: AnyObject {
-    func displayTasks(with: [ToDoEntity])
-    func updateDoneStatus(for: ToDoEntity)
+    func displayTasks(with: [ToDoModel])
+    func updateDoneStatus(for: ToDoModel)
     func showAlert(title: String, message: String)
 }
