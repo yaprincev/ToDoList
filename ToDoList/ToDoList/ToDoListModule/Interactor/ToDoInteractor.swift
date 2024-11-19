@@ -13,7 +13,14 @@ final class ToDoInteractor {
     
     // MARK: - Private properties
     
-    private var data: [ToDoEntity]?
+    private var tasks: [ToDoModel] = []
+    private let networkService: NetworkServiceProtocol?
+    
+    // MARK: - Initialization
+    
+    init(networkService: NetworkServiceProtocol) {
+        self.networkService = networkService
+    }
     
     // MARK:  - Properties
     
@@ -25,46 +32,57 @@ final class ToDoInteractor {
 
 extension ToDoInteractor: ToDoInteractorInput {
     
-    func configureMockData() {
-        var mockData = [ToDoEntity]()
-        mockData.append(ToDoEntity(title: "Почитать книгу", description: "Составить список необходимых продуктов для ужина. Не забыть проверить, что уже есть в холодильнике и в шкафу", date: Date(), isDone: true, id: 1))
-        mockData.append(ToDoEntity(title: "Уборка в квартире", description: "Провести генеральную уборку в квартире", date: Date(), isDone: false, id: 2))
-        mockData.append(ToDoEntity(title: "Заняться спортом", description: "Сходить в спортзал или сделать тренировку дома. Не забыть про разминку и растяжку", date: Date(), isDone: false, id: 3))
-        output?.didCreateMockData(mockData: mockData)
-        data = mockData
+    func getData() {
+        getTasks()
     }
     
     func changeTaskDoneStatus(for id: Int) {
-        guard let index = data?.firstIndex(where: { $0.id == id }) else {
+        guard let index = tasks.firstIndex(where: { $0.id == id }) else {
             return
         }
-        data?[index].isDone.toggle()
-        if let data {
-            output?.didChangeDoneStatus(for: data[index])
-        }
+        tasks[index].completed.toggle()
+        output?.didChangeDoneStatus(for: tasks[index])
     }
     
     func filterTasks(with query: String) {
-        guard let data else {
-            return
-        }
         if query == "" {
-            output?.didFilterTasks(filteredTasks: data)
+            output?.didFilterTasks(filteredTasks: tasks)
             return
         }
-        let filteredTasks = data.filter { task in
-            task.title.lowercased().contains(query.lowercased()) ||
-            task.description.lowercased().contains(query.lowercased())
+        let filteredTasks = tasks.filter { task in
+            task.todo.lowercased().contains(query.lowercased()) ||
+            ((task.description?.lowercased().contains(query.lowercased())) != nil)
         }
         output?.didFilterTasks(filteredTasks: filteredTasks)
     }
     
     func addNewTask(task: String) {
-        let newId = (data?.map { $0.id }.max() ?? 0) + 1
-        data?.insert(ToDoEntity(title: task, description: "", date: Date(), isDone: false, id: newId), at: 0)
-        if let data {
-            output?.didAddNewTask(newData: data)
-        }
+        let newId = (tasks.map { $0.id }.max() ?? 0) + 1
+        tasks.insert(ToDoModel(id: newId, todo: task), at: 0)
+        output?.didAddNewTask(newData: tasks)
     }
 
+}
+
+// MARK: - Private methods
+
+private extension ToDoInteractor {
+    
+    func getTasks() {
+        networkService?.getTasks(forURL: URLStorage.tasks.url, model: ToDoEntity.self) { [weak self] result in
+            guard let self = self else {
+                return
+            }
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let tasks):
+                    self.tasks = tasks.todos.map { ToDoModel(entity: $0) }
+                    self.output?.didGetTasks(tasks: self.tasks)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
+    
 }
