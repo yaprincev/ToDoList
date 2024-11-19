@@ -32,6 +32,14 @@ extension ToDoPresenter: ToDoViewOutput {
     func searchTasks(with query: String) {
         interactor?.filterTasks(with: query)
     }
+    
+    func userWantAddNewTask() {
+        view?.showAlert(title: "Добавить новую задачу", message: "Введите название задачи")
+    }
+    
+    func didEnterText(text: String) {
+        interactor?.addNewTask(task: text)
+    }
 
 }
 
@@ -54,6 +62,10 @@ extension ToDoPresenter: ToDoInteractorOutput {
     
     func didFilterTasks(filteredTasks: [ToDoEntity]) {
         view?.displayTasks(with: filteredTasks)
+    }
+    
+    func didAddNewTask(newData: [ToDoEntity]) {
+        view?.displayTasks(with: newData)
     }
     
 }
