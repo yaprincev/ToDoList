@@ -8,4 +8,5 @@
 protocol ToDoInteractorInput: AnyObject {
     func configureMockData()
     func changeTaskDoneStatus(for: Int)
+    func filterTasks(with: String)
 }

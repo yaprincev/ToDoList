@@ -43,5 +43,20 @@ extension ToDoInteractor: ToDoInteractorInput {
             output?.didChangeDoneStatus(for: data[index])
         }
     }
+    
+    func filterTasks(with query: String) {
+        guard let data else {
+            return
+        }
+        if query == "" {
+            output?.didFilterTasks(filteredTasks: data)
+            return
+        }
+        let filteredTasks = data.filter { task in
+            task.title.lowercased().contains(query.lowercased()) ||
+            task.description.lowercased().contains(query.lowercased())
+        }
+        output?.didFilterTasks(filteredTasks: filteredTasks)
+    }
 
 }

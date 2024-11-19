@@ -40,7 +40,7 @@ final class ToDoViewController: UIViewController, ModuleTransitionable {
 
 extension ToDoViewController: ToDoViewInput {
     
-    func setupInitialState(with model: [ToDoEntity]) {
+    func displayTasks(with model: [ToDoEntity]) {
         adapter.configure(with: model)
         sumLabel.text = String(model.count) + " " + model.count.pluralized(forms: ("Задача", "Задачи", "Задач"))
     }
@@ -79,6 +79,7 @@ private extension ToDoViewController {
     }
     
     func configureSearchBar() {
+        searchBar.delegate = self
         searchBar.searchBarStyle = .minimal
         searchBar.placeholder = "Search"
         
@@ -107,6 +108,16 @@ private extension ToDoViewController {
     func configureSumLabel() {
         sumLabel.font = .systemFont(ofSize: 11, weight: .medium)
         sumLabel.textColor = .white
+    }
+    
+}
+
+// MARK: - UISearchBarDelegate
+
+extension ToDoViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        output?.searchTasks(with: searchText)
     }
     
 }
