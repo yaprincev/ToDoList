@@ -22,7 +22,7 @@ final class ToDoPresenter {
 extension ToDoPresenter: ToDoViewOutput {
 
     func viewDidLoad() {
-        interactor?.configureMockData()
+        interactor?.getData()
     }
     
     func changeTaskDoneStatus(for id: Int) {
@@ -52,19 +52,19 @@ extension ToDoPresenter: DetailPresenterOutput {
 
 extension ToDoPresenter: ToDoInteractorOutput {
     
-    func didCreateMockData(mockData: [ToDoEntity]) {
-        view?.displayTasks(with: mockData)
+    func didGetTasks(tasks: [ToDoModel]) {
+        view?.displayTasks(with: tasks)
     }
     
-    func didChangeDoneStatus(for model: ToDoEntity) {
+    func didChangeDoneStatus(for model: ToDoModel) {
         view?.updateDoneStatus(for: model)
     }
     
-    func didFilterTasks(filteredTasks: [ToDoEntity]) {
+    func didFilterTasks(filteredTasks: [ToDoModel]) {
         view?.displayTasks(with: filteredTasks)
     }
     
-    func didAddNewTask(newData: [ToDoEntity]) {
+    func didAddNewTask(newData: [ToDoModel]) {
         view?.displayTasks(with: newData)
     }
     
