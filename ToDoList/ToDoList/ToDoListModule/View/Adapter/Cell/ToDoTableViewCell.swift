@@ -23,7 +23,7 @@ class ToDoTableViewCell: UITableViewCell {
     
     // MARK: - Private properties
     
-    private var model: ToDoEntity?
+    private var model: ToDoModel?
     
     // MARK: - UITableViewCell
     
@@ -34,13 +34,13 @@ class ToDoTableViewCell: UITableViewCell {
     
     // MARK: - Methods
     
-    func configure(with model: ToDoEntity) {
+    func configure(with model: ToDoModel) {
         self.model = model
-        title.text = model.title
-        strikedTitle.text = model.title
+        title.text = model.todo
+        strikedTitle.text = model.todo
         detailInformation.text = model.description
         configureDate(with: model.date)
-        configureCellState(isDone: model.isDone)
+        configureCellState(isDone: model.completed)
     }
 
 }
