@@ -51,6 +51,9 @@
                                 <constraint firstAttribute="height" constant="24" id="cxJ-Qq-SPG"/>
                             </constraints>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <connections>
+                                <action selector="onNewTaskPressed:" destination="-1" eventType="touchUpInside" id="GV5-Lp-q0P"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0e-fc-5LH">
                             <rect key="frame" x="175.66666666666666" y="21.666666666666629" width="42" height="21"/>

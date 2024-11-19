@@ -58,5 +58,13 @@ extension ToDoInteractor: ToDoInteractorInput {
         }
         output?.didFilterTasks(filteredTasks: filteredTasks)
     }
+    
+    func addNewTask(task: String) {
+        let newId = (data?.map { $0.id }.max() ?? 0) + 1
+        data?.insert(ToDoEntity(title: task, description: "", date: Date(), isDone: false, id: newId), at: 0)
+        if let data {
+            output?.didAddNewTask(newData: data)
+        }
+    }
 
 }
