@@ -8,4 +8,5 @@
 protocol ToDoViewInput: AnyObject {
     func displayTasks(with: [ToDoEntity])
     func updateDoneStatus(for: ToDoEntity)
+    func showAlert(title: String, message: String)
 }

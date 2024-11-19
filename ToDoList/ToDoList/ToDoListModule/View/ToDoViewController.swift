@@ -34,6 +34,10 @@ final class ToDoViewController: UIViewController, ModuleTransitionable {
         super.viewDidLoad()
     }
 
+    @IBAction func onNewTaskPressed(_ sender: Any) {
+        output?.userWantAddNewTask()
+    }
+    
 }
 
 // MARK: - ToDoViewInput
@@ -47,6 +51,23 @@ extension ToDoViewController: ToDoViewInput {
     
     func updateDoneStatus(for model: ToDoEntity) {
         adapter.updateCellDoneState(for: model)
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addTextField() { textField in
+            textField.placeholder = "Название задачи"
+        }
+        let okAction = UIAlertAction(title: "Добавить", style: .default) { [weak self] _ in
+            guard let textField = alert.textFields?.first, let text = textField.text, !text.isEmpty else {
+                return
+            }
+            self?.output?.didEnterText(text: text)
+        }
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
     }
     
 }
