@@ -15,7 +15,8 @@ final class ToDoListAssembly {
         let presenter = ToDoPresenter()
         
         let networkService = NetworkService()
-        let interactor = ToDoInteractor(networkService: networkService)
+        let coreDataService = CoreDataService()
+        let interactor = ToDoInteractor(networkService: networkService, coreDataService: coreDataService)
         
         presenter.interactor = interactor
         presenter.view = view
