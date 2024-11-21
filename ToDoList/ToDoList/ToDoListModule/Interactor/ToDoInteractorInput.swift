@@ -10,4 +10,6 @@ protocol ToDoInteractorInput: AnyObject {
     func changeTaskDoneStatus(for: Int)
     func filterTasks(with: String)
     func addNewTask(task: String)
+    func deleteTask(with: Int)
+    func editTask(with: Int)
 }
