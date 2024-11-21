@@ -41,12 +41,6 @@ final class ToDoAdapter: NSObject {
     func updateCellDoneState(for model: ToDoModel) {
         lastChangedCell?.configure(with: model)
     }
-    
-    func deleteTask(at index: Int) {
-        tableView.reloadData()
-        model?.remove(at: index)
-        tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
-    }
 
 }
 

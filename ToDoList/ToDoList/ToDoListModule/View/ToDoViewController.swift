@@ -70,10 +70,6 @@ extension ToDoViewController: ToDoViewInput {
         present(alert, animated: true, completion: nil)
     }
     
-    func deleteTaskFromUI(at index: Int) {
-        adapter.deleteTask(at: index)
-    }
-    
 }
 
 // MARK: - Private methods
