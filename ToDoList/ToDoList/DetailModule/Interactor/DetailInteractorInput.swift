@@ -6,5 +6,6 @@
 //
 
 protocol DetailInteractorInput: AnyObject {
+    func updateData(model: ToDoModel)
 }
 
