@@ -79,5 +79,9 @@ extension ToDoPresenter: ToDoInteractorOutput {
         router?.openDetailScreen(with: task)
     }
     
+    func didUpdateTask(newData: [ToDoModel]) {
+        view?.displayTasks(with: newData)
+    }
+    
 }
 
