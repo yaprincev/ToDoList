@@ -14,7 +14,8 @@ final class DetailAssembly {
         let router = DetailRouter()
         let presenter = DetailPresenter(model: task)
         
-        let interactor = DetailInteractor()
+        let coreDataService = CoreDataService()
+        let interactor = DetailInteractor(coreDataService: coreDataService)
         
         presenter.interactor = interactor
         presenter.view = view
