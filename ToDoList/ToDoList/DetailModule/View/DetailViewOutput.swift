@@ -7,4 +7,5 @@
 
 protocol DetailViewOutput: AnyObject {
     func viewDidLoad()
+    func userWillLeaveTheScreen(with: String)
 }
