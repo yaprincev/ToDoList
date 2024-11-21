@@ -14,15 +14,20 @@ final class ToDoAdapter: NSObject {
     private var model: [ToDoModel]?
     private let tableView: UITableView
     private var lastChangedCell: ToDoTableViewCell?
+    private var indexPathToId: [Int: Int] = [:]
     
     // MARK: - Properties
     
     var onDoneStateChanged: Closure<(Int)>?
+    var onDeleteContextDidTap: Closure<(Int)>?
+    var onEditContextDidTap: Closure<(Int)>?
     
     // MARK: - Initialization
 
     init(tableView: UITableView) {
         self.tableView = tableView
+        tableView.backgroundColor = .black
+        tableView.register(UINib(nibName: "ToDoTableViewCell", bundle: nil), forCellReuseIdentifier: "ToDoCell")
         super.init()
     }
     
@@ -30,13 +35,17 @@ final class ToDoAdapter: NSObject {
     
     func configure(with model: [ToDoModel]) {
         self.model = model
-        tableView.backgroundColor = .black
-        tableView.register(UINib(nibName: "ToDoTableViewCell", bundle: nil), forCellReuseIdentifier: "ToDoCell")
         tableView.reloadData()
     }
     
     func updateCellDoneState(for model: ToDoModel) {
         lastChangedCell?.configure(with: model)
+    }
+    
+    func deleteTask(at index: Int) {
+        tableView.reloadData()
+        model?.remove(at: index)
+        tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
     }
 
 }
@@ -52,6 +61,7 @@ extension ToDoAdapter: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath) as? ToDoTableViewCell
+        indexPathToId[indexPath.row] = model[indexPath.row].id
         cell?.onDoneStateChanged = { [weak self] id in
             self?.lastChangedCell = cell
             self?.onDoneStateChanged?(id)
@@ -60,4 +70,21 @@ extension ToDoAdapter: UITableViewDataSource, UITableViewDelegate {
         return cell ?? UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(actionProvider:  { suggestedActions in
+            let redTitle = NSMutableAttributedString(string: "Удалить", attributes: [
+                .foregroundColor: UIColor.red
+            ])
+            let editAction = UIAction(title: "Редактировать", image: UIImage(named: "edit")) { [weak self] action in
+                self?.onEditContextDidTap?(self?.indexPathToId[indexPath.row] ?? 0)
+            }
+            let shareAction = UIAction(title: "Поделиться", image: UIImage(named: "export")) { action in
+            }
+            let deleteAction = UIAction(title: "", image: UIImage(named: "trash")) { [weak self] action in
+                self?.onDeleteContextDidTap?(self?.indexPathToId[indexPath.row] ?? 0)
+            }
+            deleteAction.setValue(redTitle, forKey: "attributedTitle")
+            return UIMenu(title: "", children: [editAction, shareAction, deleteAction])
+        })
+    }
 }
