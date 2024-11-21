@@ -84,11 +84,12 @@ private extension ToDoViewController {
         configureBottomView()
         configureAddItemButton()
         configureSumLabel()
+        configureNavigationBar()
     }
     
     func configureTitle() {
         titleLabel.text = "Задачи"
-        titleLabel.font = .systemFont(ofSize: 34, weight: UIFont.Weight(700))
+        titleLabel.font = .systemFont(ofSize: 34, weight: .bold)
         titleLabel.textColor = .white
     }
     
@@ -136,6 +137,11 @@ private extension ToDoViewController {
     func configureSumLabel() {
         sumLabel.font = .systemFont(ofSize: 11, weight: .medium)
         sumLabel.textColor = .white
+    }
+    
+    func configureNavigationBar() {
+        navigationItem.backButtonTitle = "Назад"
+        navigationController?.navigationBar.tintColor = .yellow
     }
     
 }

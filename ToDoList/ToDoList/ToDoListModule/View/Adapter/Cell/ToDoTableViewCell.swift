@@ -39,7 +39,7 @@ class ToDoTableViewCell: UITableViewCell {
         title.text = model.todo
         strikedTitle.text = model.todo
         detailInformation.text = model.description
-        configureDate(with: model.date)
+        date.text = model.date.configureDateForTasks()
         configureCellState(isDone: model.completed)
     }
 
@@ -54,6 +54,7 @@ private extension ToDoTableViewCell {
         configureDetailInformation()
         configureTapHandler()
         configureStrikedTitle()
+        configureDate()
         selectionStyle = .none
         backgroundColor = .black
     }
@@ -75,13 +76,10 @@ private extension ToDoTableViewCell {
         detailInformation.textColor = .white
     }
     
-    func configureDate(with dateText: Date) {
+    func configureDate() {
         date.font = .systemFont(ofSize: 12, weight: .light)
         date.numberOfLines = 1
         date.textColor = .white
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yy"
-        date.text = formatter.string(from: dateText)
     }
     
     func configureCellState(isDone: Bool) {
