@@ -17,7 +17,7 @@ final class DetailPresenter {
     
     // MARK: - Private properties
     
-    private let model: ToDoModel?
+    private var model: ToDoModel?
     
     // MARK: - Initialization
     
@@ -36,6 +36,15 @@ extension DetailPresenter: DetailViewOutput {
             return
         }
         view?.configureDetailScreen(for: model)
+    }
+    
+    func userWillLeaveTheScreen(with description: String) {
+        if model?.description != description {
+            model?.description = description
+            if let model {
+                interactor?.updateData(model: model)
+            }
+        }
     }
     
 }
