@@ -6,4 +6,5 @@
 //
 
 protocol DetailViewInput: AnyObject {
+    func configureDetailScreen(for: ToDoModel)
 }
