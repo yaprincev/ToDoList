@@ -12,4 +12,5 @@ protocol ToDoInteractorOutput: AnyObject {
     func didAddNewTask(newData: [ToDoModel])
     func didDeleteTask(newData: [ToDoModel])
     func didFoundTaskForEdit(task: ToDoModel)
+    func didUpdateTask(newData: [ToDoModel])
 }

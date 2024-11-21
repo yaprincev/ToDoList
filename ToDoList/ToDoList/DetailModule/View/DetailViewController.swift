@@ -27,6 +27,10 @@ final class DetailViewController: UIViewController, ModuleTransitionable {
         output?.viewDidLoad()
         configureAppearence()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        output?.userWillLeaveTheScreen(with: textView.text)
+    }
 
 }
 
@@ -38,6 +42,7 @@ extension DetailViewController: DetailViewInput {
         dateLabel.text = task.date.configureDateForTasks()
         titleLabel.text = task.todo
         textView.text = task.description
+        placeholderLabel.isHidden = !textView.text.isEmpty
     }
 
 }
