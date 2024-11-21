@@ -13,4 +13,11 @@ final class ToDoRouter: ToDoRouterInput {
     
     weak var view: ModuleTransitionable?
     
+    // MARK: - ToDoRouterInput
+    
+    func openDetailScreen(with task: ToDoModel) {
+        let detailModule = DetailAssembly().assembly(with: task)
+        view?.push(module: detailModule, animated: true)
+    }
+    
 }
