@@ -33,19 +33,22 @@ extension ToDoPresenter: ToDoViewOutput {
         interactor?.filterTasks(with: query)
     }
     
-    func userWantAddNewTask() {
+    func userWantsAddNewTask() {
         view?.showAlert(title: "Добавить новую задачу", message: "Введите название задачи")
     }
     
     func didEnterText(text: String) {
         interactor?.addNewTask(task: text)
     }
+    
+    func userWantsDeleteTask(with id: Int) {
+        interactor?.deleteTask(with: id)
+    }
+    
+    func userWantsEditTask(with id: Int) {
+        interactor?.editTask(with: id)
+    }
 
-}
-
-// MARK: - DetailPresenterOutput
-
-extension ToDoPresenter: DetailPresenterOutput {
 }
 
 // MARK: - ToDoInteractorOutput
@@ -66,6 +69,14 @@ extension ToDoPresenter: ToDoInteractorOutput {
     
     func didAddNewTask(newData: [ToDoModel]) {
         view?.displayTasks(with: newData)
+    }
+    
+    func didDeleteTask(newData: [ToDoModel]) {
+        view?.displayTasks(with: newData)
+    }
+    
+    func didFoundTaskForEdit(task: ToDoModel) {
+        router?.openDetailScreen(with: task)
     }
     
 }
