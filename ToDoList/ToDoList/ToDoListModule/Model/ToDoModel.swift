@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 struct ToDoModel {
     let id: Int
@@ -26,6 +27,14 @@ struct ToDoModel {
         self.todo = todo
         self.completed = false
         self.date = Date()
+    }
+    
+    init(coreDataTask: Task) {
+        self.id = Int(coreDataTask.id)
+        self.todo = coreDataTask.title ?? "Без названия"
+        self.completed = coreDataTask.completed
+        self.date = coreDataTask.createdDate ?? Date()
+        self.description = coreDataTask.taskDescription
     }
 
 }
