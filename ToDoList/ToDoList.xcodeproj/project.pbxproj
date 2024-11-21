@@ -13,6 +13,7 @@
 		3F355EAD2CECBEC700C5D652 /* URLStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F355EAC2CECBEC700C5D652 /* URLStorage.swift */; };
 		3F355EB12CECC73100C5D652 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F355EB02CECC73100C5D652 /* ToDoModel.swift */; };
 		3F355EB62CEE99A600C5D652 /* DetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F355EB52CEE99A600C5D652 /* DetailAssembly.swift */; };
+		3F355EB82CEF7FEC00C5D652 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F355EB72CEF7FEC00C5D652 /* Date.swift */; };
 		3F588BBF2CEA4BC400E87525 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F588BBE2CEA4BC400E87525 /* Int.swift */; };
 		3F89EAE52CE789870046E1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EAE42CE789870046E1BD /* AppDelegate.swift */; };
 		3F89EAE72CE789870046E1BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EAE62CE789870046E1BD /* SceneDelegate.swift */; };
@@ -75,6 +76,7 @@
 		3F355EAC2CECBEC700C5D652 /* URLStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLStorage.swift; sourceTree = "<group>"; };
 		3F355EB02CECC73100C5D652 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
 		3F355EB52CEE99A600C5D652 /* DetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembly.swift; sourceTree = "<group>"; };
+		3F355EB72CEF7FEC00C5D652 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		3F588BBE2CEA4BC400E87525 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		3F89EAE12CE789870046E1BD /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F89EAE42CE789870046E1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 			children = (
 				3F89EB612CEA2D140046E1BD /* String.swift */,
 				3F588BBE2CEA4BC400E87525 /* Int.swift */,
+				3F355EB72CEF7FEC00C5D652 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				3F89EB2B2CE7941D0046E1BD /* ToDoRouterInput.swift in Sources */,
 				3F89EAE52CE789870046E1BD /* AppDelegate.swift in Sources */,
 				3F89EB332CE795120046E1BD /* DetailRouterInput.swift in Sources */,
+				3F355EB82CEF7FEC00C5D652 /* Date.swift in Sources */,
 				3F89EB442CE7A7F40046E1BD /* DetailViewController.swift in Sources */,
 				3F89EB2D2CE794260046E1BD /* ToDoRouter.swift in Sources */,
 				3F89EB232CE793670046E1BD /* ToDoInteractor.swift in Sources */,

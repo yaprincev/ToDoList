@@ -6,4 +6,5 @@
 //
 
 protocol DetailViewOutput: AnyObject {
+    func viewDidLoad()
 }

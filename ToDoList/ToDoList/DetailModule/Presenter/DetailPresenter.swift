@@ -30,7 +30,17 @@ final class DetailPresenter {
 //  MARK: - DetailViewOutput
 
 extension DetailPresenter: DetailViewOutput {
+    
+    func viewDidLoad() {
+        guard let model else {
+            return
+        }
+        view?.configureDetailScreen(for: model)
+    }
+    
 }
+
+// MARK: - DetailInteractorOutput
 
 extension DetailPresenter: DetailInteractorOutput {
 }
