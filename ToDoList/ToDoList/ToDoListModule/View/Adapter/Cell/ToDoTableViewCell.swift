@@ -54,6 +54,7 @@ private extension ToDoTableViewCell {
         configureDetailInformation()
         configureTapHandler()
         configureStrikedTitle()
+        selectionStyle = .none
         backgroundColor = .black
     }
     

@@ -36,6 +36,14 @@ extension ToDoInteractor: ToDoInteractorInput {
         getTasks()
     }
     
+    func deleteTask(with id: Int) {
+        guard let index = tasks.firstIndex(where: { $0.id == id }) else {
+            return
+        }
+        tasks.remove(at: index)
+        output?.didDeleteTask(newData: tasks)
+    }
+    
     func changeTaskDoneStatus(for id: Int) {
         guard let index = tasks.firstIndex(where: { $0.id == id }) else {
             return
@@ -60,6 +68,13 @@ extension ToDoInteractor: ToDoInteractorInput {
         let newId = (tasks.map { $0.id }.max() ?? 0) + 1
         tasks.insert(ToDoModel(id: newId, todo: task), at: 0)
         output?.didAddNewTask(newData: tasks)
+    }
+    
+    func editTask(with id: Int) {
+        guard let index = tasks.firstIndex(where: { $0.id == id }) else {
+            return
+        }
+        output?.didFoundTaskForEdit(task: tasks[index])
     }
 
 }

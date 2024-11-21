@@ -6,4 +6,5 @@
 //
 
 protocol ToDoRouterInput: AnyObject {
+    func openDetailScreen(with: ToDoModel)
 }

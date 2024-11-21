@@ -9,4 +9,8 @@
 
 final class DetailRouter: DetailRouterInput {
 
+    // MARK: - Properties
+    
+    weak var view: ModuleTransitionable?
+    
 }

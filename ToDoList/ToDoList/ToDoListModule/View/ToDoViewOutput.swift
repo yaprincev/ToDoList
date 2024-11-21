@@ -9,7 +9,9 @@ protocol ToDoViewOutput: AnyObject {
     func viewDidLoad()
     func changeTaskDoneStatus(for: Int)
     func searchTasks(with: String)
-    func userWantAddNewTask()
+    func userWantsAddNewTask()
     func didEnterText(text: String)
+    func userWantsDeleteTask(with: Int)
+    func userWantsEditTask(with: Int)
 }
 

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 protocol NetworkServiceProtocol {
     func getTasks <T: Decodable>(forURL url: URL?, model: T.Type, completion: @escaping (Result<T, Error>) -> Void)

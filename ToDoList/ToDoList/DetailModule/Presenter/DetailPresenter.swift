@@ -13,19 +13,24 @@ final class DetailPresenter {
     
     weak var view: DetailViewInput?
     var router: DetailRouterInput?
+    var interactor: DetailInteractorInput?
     
-    // MARK: - DetailPresenterOutput
+    // MARK: - Private properties
     
-    var output: DetailPresenterOutput?
+    private let model: ToDoModel?
+    
+    // MARK: - Initialization
+    
+    init(model: ToDoModel) {
+        self.model = model
+    }
 
-}
-
-// MARK: - DetailPresenterInput
-
-extension DetailPresenter: DetailPresenterInput {
 }
 
 //  MARK: - DetailViewOutput
 
 extension DetailPresenter: DetailViewOutput {
+}
+
+extension DetailPresenter: DetailInteractorOutput {
 }

@@ -35,7 +35,7 @@ final class ToDoViewController: UIViewController, ModuleTransitionable {
     }
 
     @IBAction func onNewTaskPressed(_ sender: Any) {
-        output?.userWantAddNewTask()
+        output?.userWantsAddNewTask()
     }
     
 }
@@ -94,8 +94,15 @@ private extension ToDoViewController {
     
     func configureAdapter() {
         tableView.dataSource = adapter
+        tableView.delegate = adapter
         adapter.onDoneStateChanged = { [weak self] id in
             self?.output?.changeTaskDoneStatus(for: id)
+        }
+        adapter.onDeleteContextDidTap = { [weak self] id in
+            self?.output?.userWantsDeleteTask(with: id)
+        }
+        adapter.onEditContextDidTap = { [weak self] id in
+            self?.output?.userWantsEditTask(with: id)
         }
     }
     
