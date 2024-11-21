@@ -197,6 +197,15 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		3F355EC62CEFCAF000C5D652 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3F89EB152CE78F550046E1BD /* DetailModule */,
+				3F89EB142CE78F450046E1BD /* ToDoListModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		3F588BC02CEA653E00E87525 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,11 +237,10 @@
 		3F89EAE32CE789870046E1BD /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				3F355EC62CEFCAF000C5D652 /* Modules */,
 				3F355EBC2CEF943000C5D652 /* CoreData */,
 				3F355EA72CECBE7500C5D652 /* Networking */,
 				3F89EB5F2CEA2D040046E1BD /* Reusable layer */,
-				3F89EB142CE78F450046E1BD /* ToDoListModule */,
-				3F89EB152CE78F550046E1BD /* DetailModule */,
 				3F89EAE42CE789870046E1BD /* AppDelegate.swift */,
 				3F89EAE62CE789870046E1BD /* SceneDelegate.swift */,
 				3F89EAE82CE789870046E1BD /* ViewController.swift */,
