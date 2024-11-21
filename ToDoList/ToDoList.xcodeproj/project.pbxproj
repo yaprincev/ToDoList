@@ -12,6 +12,7 @@
 		3F355EAB2CECBEA400C5D652 /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F355EAA2CECBEA400C5D652 /* NetworkConfiguration.swift */; };
 		3F355EAD2CECBEC700C5D652 /* URLStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F355EAC2CECBEC700C5D652 /* URLStorage.swift */; };
 		3F355EB12CECC73100C5D652 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F355EB02CECC73100C5D652 /* ToDoModel.swift */; };
+		3F355EB62CEE99A600C5D652 /* DetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F355EB52CEE99A600C5D652 /* DetailAssembly.swift */; };
 		3F588BBF2CEA4BC400E87525 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F588BBE2CEA4BC400E87525 /* Int.swift */; };
 		3F89EAE52CE789870046E1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EAE42CE789870046E1BD /* AppDelegate.swift */; };
 		3F89EAE72CE789870046E1BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EAE62CE789870046E1BD /* SceneDelegate.swift */; };
@@ -41,8 +42,6 @@
 		3F89EB472CE7A8040046E1BD /* DetailViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB462CE7A8040046E1BD /* DetailViewInput.swift */; };
 		3F89EB492CE7A80C0046E1BD /* DetailViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB482CE7A80C0046E1BD /* DetailViewOutput.swift */; };
 		3F89EB4B2CE7A84B0046E1BD /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB4A2CE7A84B0046E1BD /* DetailPresenter.swift */; };
-		3F89EB4D2CE7A8510046E1BD /* DetailPresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB4C2CE7A8510046E1BD /* DetailPresenterInput.swift */; };
-		3F89EB4F2CE7A8580046E1BD /* DetailPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB4E2CE7A8580046E1BD /* DetailPresenterOutput.swift */; };
 		3F89EB512CE7C6440046E1BD /* ToDoListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB502CE7C6440046E1BD /* ToDoListAssembly.swift */; };
 		3F89EB542CE7C71E0046E1BD /* ModuleTransitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB532CE7C71E0046E1BD /* ModuleTransitionable.swift */; };
 		3F89EB572CE7DEC60046E1BD /* ToDoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F89EB562CE7DEC60046E1BD /* ToDoAdapter.swift */; };
@@ -75,6 +74,7 @@
 		3F355EAA2CECBEA400C5D652 /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
 		3F355EAC2CECBEC700C5D652 /* URLStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLStorage.swift; sourceTree = "<group>"; };
 		3F355EB02CECC73100C5D652 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
+		3F355EB52CEE99A600C5D652 /* DetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembly.swift; sourceTree = "<group>"; };
 		3F588BBE2CEA4BC400E87525 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		3F89EAE12CE789870046E1BD /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F89EAE42CE789870046E1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,8 +108,6 @@
 		3F89EB462CE7A8040046E1BD /* DetailViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewInput.swift; sourceTree = "<group>"; };
 		3F89EB482CE7A80C0046E1BD /* DetailViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewOutput.swift; sourceTree = "<group>"; };
 		3F89EB4A2CE7A84B0046E1BD /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
-		3F89EB4C2CE7A8510046E1BD /* DetailPresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterInput.swift; sourceTree = "<group>"; };
-		3F89EB4E2CE7A8580046E1BD /* DetailPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterOutput.swift; sourceTree = "<group>"; };
 		3F89EB502CE7C6440046E1BD /* ToDoListAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListAssembly.swift; sourceTree = "<group>"; };
 		3F89EB532CE7C71E0046E1BD /* ModuleTransitionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTransitionable.swift; sourceTree = "<group>"; };
 		3F89EB562CE7DEC60046E1BD /* ToDoAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoAdapter.swift; sourceTree = "<group>"; };
@@ -261,6 +259,7 @@
 				3F89EB1C2CE78F870046E1BD /* Presenter */,
 				3F89EB1B2CE78F820046E1BD /* Router */,
 				3F89EB1A2CE78F7D0046E1BD /* View */,
+				3F355EB52CEE99A600C5D652 /* DetailAssembly.swift */,
 			);
 			path = DetailModule;
 			sourceTree = "<group>";
@@ -328,8 +327,6 @@
 			isa = PBXGroup;
 			children = (
 				3F89EB4A2CE7A84B0046E1BD /* DetailPresenter.swift */,
-				3F89EB4C2CE7A8510046E1BD /* DetailPresenterInput.swift */,
-				3F89EB4E2CE7A8580046E1BD /* DetailPresenterOutput.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -520,7 +517,6 @@
 				3F89EB252CE793CD0046E1BD /* DetailInteractorInput.swift in Sources */,
 				3F89EB212CE793400046E1BD /* ToDoInteractorOutput.swift in Sources */,
 				3F89EB292CE793DE0046E1BD /* DetailInteractor.swift in Sources */,
-				3F89EB4F2CE7A8580046E1BD /* DetailPresenterOutput.swift in Sources */,
 				3F355EB12CECC73100C5D652 /* ToDoModel.swift in Sources */,
 				3F89EB4B2CE7A84B0046E1BD /* DetailPresenter.swift in Sources */,
 				3F89EB5D2CE8DCCB0046E1BD /* ToDoTableViewCell.swift in Sources */,
@@ -547,7 +543,7 @@
 				3F89EB352CE7972A0046E1BD /* ToDoPresenter.swift in Sources */,
 				3F89EAE72CE789870046E1BD /* SceneDelegate.swift in Sources */,
 				3F588BBF2CEA4BC400E87525 /* Int.swift in Sources */,
-				3F89EB4D2CE7A8510046E1BD /* DetailPresenterInput.swift in Sources */,
+				3F355EB62CEE99A600C5D652 /* DetailAssembly.swift in Sources */,
 				3F89EB3F2CE798910046E1BD /* ToDoViewInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
